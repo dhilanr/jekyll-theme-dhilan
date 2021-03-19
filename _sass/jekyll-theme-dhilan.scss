@@ -1,0 +1,286 @@
+// Default font
+$font-family-sans-serif: "PT Sans" !default;
+
+// Crimson links
+$link-color: #a51c30 !default;
+$link-hover-color: $link-color !default;
+
+// Headings
+// https://github.com/primer/css/blob/master/src/markdown/headings.scss
+$h1-font-size: 2rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1rem;
+$h5-font-size: 0.875rem;
+$h6-font-size: 0.85rem;
+$headings-font-weight: bold;
+
+// Import Bootstrap
+@import "bootstrap/scss/bootstrap.scss";
+
+// GitHub syntax highlighter color scheme for Pygments
+// https://github.com/PhilipTrauner/pygments-github-css/blob/master/github.css
+@import "rouge";
+
+// Align badges
+.badge {
+    vertical-align: middle;
+}
+
+// Format tables like paragraphs
+.bootstrap-table {
+    margin-bottom: 1rem;
+
+    // Only fill viewport's width in card view
+    .fixed-table-container:not(.has-card-view) .table {
+        width: auto;
+    }
+
+    // A la GitHub
+    .table td, .table th {
+        padding: .5rem .75rem;
+    }
+
+    // Boldface headings in card view
+    .card-view:first-child {
+        font-weight: bold;
+    }
+}
+
+// Confine borders to images
+.img-thumbnail {
+    width: fit-content;
+}
+
+// Fill 80% of viewport
+.modal-dialog {
+    max-height: inherit;
+    max-width: inherit;
+    margin: 0 auto;
+    width: 80vw;
+}
+.modal-content {
+    height: 80vh;
+}
+
+// Suppress bottom margin within parents
+:last-child {
+    margin-bottom: 0;
+}
+
+// Wrap long words (and URLs, whether linked or not), especially on mobile,
+// but not in buttons and not in tables, which should instead scroll horizontally
+* {
+    word-break: break-word;
+}
+button, table * {
+    word-break: normal;
+}
+
+// Offset links' underline
+a:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+    text-decoration-style: solid;
+}
+a[data-local] {
+    color: inherit;
+    text-decoration-line: underline;
+    text-underline-offset: 3px;
+    text-decoration-style: dotted;
+    text-decoration-thickness: from-font;
+}
+a[data-local]:hover {
+    text-decoration-style: solid;
+}
+
+// A la GitHub
+blockquote {
+    border-left-color: $gray-200;
+    border-left-style: solid;
+    border-left-width: thick;
+    color: $text-muted;
+    padding-left: 1rem;
+}
+
+// A la GitHub
+code {
+    color: inherit;
+}
+code.highlighter-rouge {
+    background-color: $gray-100;
+    @extend .border;
+    padding: calc(.2rem - 1px) .2rem;
+}
+div.highlighter-rouge {
+    margin-bottom: 1rem;
+}
+li {
+    div.highlighter-rouge {
+        margin-bottom: 0;
+    }
+}
+
+// Details, summaries
+details {
+    margin-bottom: 1rem;
+}
+summary + * {
+    margin-top: 1rem; // Because no pseudo-class for detecting when details are open
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+
+    // Subtle anchors
+    a[data-id] {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+h1, h2, .h1, .h2 {
+    border-bottom-color: $gray-200;
+    border-bottom-style: solid;
+    border-bottom-width: thin;
+    padding-bottom: .5rem;
+}
+@for $i from 1 through 6 {
+    h#{$i} + a[data-id],
+    h#{$i} + a[data-id],
+    .h#{$i} + a[data-id],
+    .h#{$i} + a[data-id] {
+        margin-top: -.5rem;
+    }
+}
+
+// Defaults for iframes
+iframe {
+    border: 0;
+    display: block; // Else defaults to inline, which adds whitespace below margin-bottom
+    height: 480px;
+    margin-bottom: 16px;
+}
+
+// Ensure responsive in Safari on iOS (for, e.g., Google Calendars), per
+// https://stackoverflow.com/a/23083463/5156190
+iframe {
+    min-width: 100%;
+    width: 1px;
+}
+
+// Confine images to parent
+img {
+    max-width: 100%;
+}
+
+// A la GitHub
+dt + dd, dd + dd {
+    margin-top: .25rem;
+}
+li:first-child, li + li {
+    margin-top: .25rem;
+}
+#markdown-toc { // But not in TOC
+    li:first-child, li + li {
+        margin-top: 0;
+    }
+}
+li > blockquote,
+li > img {
+    margin-top: .25rem;
+}
+li > div.highlighter-rouge,
+li > p {
+    margin-top: 1rem;
+}
+
+// Mimic Google's highlighting
+mark, .mark {
+    background-color: inherit;
+    color: inherit;
+    font-weight: bold;
+    padding: 0
+}
+
+// Padding after numbers
+ol > li {
+    padding-left: .5rem;
+}
+
+// A la GitHub
+pre {
+    @extend .border;
+    background-color: $gray-100;
+    padding: $table-cell-padding;
+}
+
+/* Safari issue
+// Ensure number appears when li contains pre
+pre {
+    overflow: initial;
+}
+*/
+
+// Prevent wrapping on iOS
+pre code span {
+    white-space: pre;
+}
+li pre:last-child {
+    margin-bottom: 0;
+}
+
+//// alert
+
+// Box shadows
+#alert, aside {
+    box-shadow: .5rem .5rem 1rem rgba($black, .20); // https://github.com/twbs/bootstrap/blob/master/scss/_variables.scss
+}
+
+//// marker
+
+// + and -
+[data-marker="+"] > span, [data-marker="-"] > span {
+    cursor: pointer;
+}
+[data-marker="+"] > .fa-li, [data-marker="-"] > .fa-li {
+    user-select: none;
+}
+[data-marker="+"] > .fa-li > .fa-plus-square, [data-marker="-"] > .fa-li > .fa-minus-square {
+    font-size: 80%;
+}
+
+// +
+[data-marker="+"] > ol, [data-marker="+"] > ul {
+    display: none;
+}
+
+// *
+[data-marker="*"] > .fa-li > .fa-circle {
+    font-size: 40%;
+    vertical-align: 40%;
+}
+
+
+//// next
+
+.next {
+    display: none;
+}
+
+
+//// spoiler
+
+details > summary {
+    font-weight: bold;
+}
+
+//// video
+
+// Format videos like paragraphs
+[data-video] {
+    background-color: #000;
+    margin-bottom: 1rem;
+}

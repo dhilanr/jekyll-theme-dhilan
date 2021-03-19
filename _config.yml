@@ -1,0 +1,11 @@
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
+sass:
+  load_paths:
+    - _sass
+    - _sass/node_modules
