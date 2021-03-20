@@ -11,8 +11,8 @@
     <body class="invisible">
 
         {% if site.alert %}
-        <p> hi {{ site.alert }}</p>
-        <p> making alert now {{ site.alert }}</p>
+        <!-- {% assign alerts = "primary,secondary,success,danger,warning,info,light,dark" | split: "," %} -->
+        <!-- {% if alerts contains site.alert %} -->
         <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.alert }}" id="alert" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -21,8 +21,9 @@
             {{- alert | markdownify | replace: " id=", " data-id=" | strip -}}
         </div>
         {% endif %}
+        <!-- {% endif %} -->
 
-        <div class="container-fluid">
+        <div class="container">
 
             <div class="row">
 
