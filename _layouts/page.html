@@ -10,11 +10,11 @@
 
     <body class="invisible">
 
-        {% if site.dhilan.alert.alert %}
+        {% if site.dhilan.alert.success %}
         <h1>success sir</h1>
         {% assign alerts = "primary,secondary,success,danger,warning,info,light,dark" | split: "," %}
-        {% if alerts contains site.dhilan.alert.alert %}
-        <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.dhilan.alert.alert }}" id="alert" role="alert">
+        {% if alerts contains site.dhilan.alert.success %}
+        <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="success" id="alert" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
