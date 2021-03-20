@@ -10,10 +10,10 @@ body > div.container-fluid > div.row {
     align-items: flex-start;
 }
 
-// Crimson background, transparent text
+// Link color background, transparent text
 aside {
     background-color: $link-color;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.75);
     font-size: 1.125rem;
 }
 
