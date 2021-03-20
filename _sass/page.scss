@@ -208,6 +208,7 @@ main a[data-id][id] {
 // Tiny screens?  Wrap even h1
 @media (max-width: 260px) {
     h1 * {
+        font-size: 2.1rem;
         word-break: break-word;
     }
 }
