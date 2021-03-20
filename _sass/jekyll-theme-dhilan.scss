@@ -95,7 +95,10 @@ $headings-font-weight: bold;
 * {
     word-break: break-word;
 }
-h1, button, table * {
+h1 * {
+    word-break: normal;
+}
+button, table * {
     word-break: normal;
 }
 
