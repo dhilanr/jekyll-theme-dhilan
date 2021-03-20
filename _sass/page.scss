@@ -169,6 +169,15 @@ main a[data-id][id] {
     padding-right: 1rem;
 }
 
+// VIDEOS
+.vid-fluid {
+  // Part 1: Set a maximum relative to the parent
+  max-width: 100%;
+  // Part 2: Override the height to auto, otherwise images will be stretched
+  // when setting a width and height attribute on the img element.
+  height: auto;
+}
+
 // On small devices and printers
 // https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints
 @media (max-width: 767.98px), print {
