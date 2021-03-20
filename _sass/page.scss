@@ -10,6 +10,10 @@ body > div.container-fluid > div.row {
     align-items: flex-start;
 }
 
+body {
+    font-family: "Roboto";
+}
+
 // Link color background, transparent text
 aside {
     background-color: $link-color;
