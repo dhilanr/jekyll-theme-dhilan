@@ -2,3 +2,6 @@
 
 source "https://rubygems.org"
 gemspec
+
+# SEO
+gem 'jekyll-seo-tag'

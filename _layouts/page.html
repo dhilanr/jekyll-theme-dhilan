@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html lang="{{ page.lang | default: site.lang | default: "en-us" }}">
+    
+    {% seo %}
 
     <head>
 
@@ -10,9 +12,8 @@
 
     <body class="invisible">
 
+        <!-- alerts added to _config.yml: primary,secondary,success,danger,warning,info,light,dark -->
         {% if site.alert %}
-        <!-- {% assign alerts = "primary,secondary,success,danger,warning,info,light,dark" | split: "," %} -->
-        <!-- {% if alerts contains site.alert %} -->
         <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.alert }}" id="alert" role="alert">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -21,7 +22,6 @@
             {{- alert | markdownify | replace: " id=", " data-id=" | strip -}}
         </div>
         {% endif %}
-        <!-- {% endif %} -->
 
         <div class="container">
 
