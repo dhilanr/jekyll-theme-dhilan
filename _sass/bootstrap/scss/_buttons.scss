@@ -109,6 +109,11 @@ fieldset:disabled a.btn {
 // Button Sizes
 //
 
+// Increase button size
+$btn-padding-y-sm: 0.25rem;
+$btn-padding-x-sm: 1.1rem;
+$btn-font-size-sm: 1rem;
+
 .btn-lg {
   @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
 }
