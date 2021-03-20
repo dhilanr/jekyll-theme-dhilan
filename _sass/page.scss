@@ -182,6 +182,18 @@ main a[data-id][id] {
   height: auto;
 }
 
+// Messages
+//
+// Show alert messages to users. You may add it to single elements like a `<p>`,
+// or to a parent if there are multiple elements to show.
+
+.message {
+    background-color: #f9f9f9;
+    color: #717171;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
 // On small devices and printers
 // https://getbootstrap.com/docs/4.5/layout/overview/#responsive-breakpoints
 @media (max-width: 767.98px), print {
