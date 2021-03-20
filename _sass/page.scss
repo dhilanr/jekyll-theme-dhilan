@@ -57,27 +57,27 @@ aside a:hover,
 aside button[data-toggle=collapse],
 aside button[data-toggle=collapse]:hover {
     background-color: inherit;
-    border-color: rgba(255, 255, 255, .5);
-    color: rgb(16, 16, 16);
+    border-color: rgba(172, 172, 172, 0.5);
+    color: rgb(123, 123, 123);
 }
 aside button[data-toggle=modal],
 aside button[data-toggle=modal]:hover {
-    color: rgba(255, 255, 255, 1);
+    color: rgb(171, 171, 171);
 }
 
 // Opaque border
 aside button[data-toggle=collapse]:hover {
-    border-color: rgba(255, 255, 255, 1);
+    border-color: rgb(133, 133, 133);
 }
 
 // Invert colors when not collapsed
 aside button[data-toggle=collapse]:not(.collapsed) {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgb(26, 26, 26);
     color: $link-color;
 }
 
 aside hr {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(91, 91, 91, 0.1);
 }
 
 // Compact small paragraphs
