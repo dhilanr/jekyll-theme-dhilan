@@ -34,16 +34,18 @@ aside {
 // Override column's padding
 aside.col-md {
     padding: 2rem 2rem;
+    text-align: center;
 }
 
 // Fixed width, scroll on larger devices
 @include media-breakpoint-up(md) {
     @media screen {
         aside.col-md {
-            flex: 0 1 20rem;
+            flex: 0 1 auto;
             overflow-y: auto;
             position: sticky;
-            z-index: $zindex-sticky - 1;	
+            z-index: $zindex-sticky - 1;
+            text-align: right;
         }
     }
 }
