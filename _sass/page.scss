@@ -170,6 +170,9 @@ main a[data-id][id] {
 main a {
     color:rgb(26, 26, 26)
 }
+main a:hover {
+    color:rgb(58, 58, 58)
+}
 
 // Don't number search results
 #search ol {
