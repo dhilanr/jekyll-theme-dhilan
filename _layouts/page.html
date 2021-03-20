@@ -10,7 +10,7 @@
 
     <body class="invisible">
 
-        {% if site.dhilan.handles.alert %}
+        {% if not site.dhilan.handles.alert %}
         <h1> made it here</h1>
         {% assign alerts = "primary,secondary,success,danger,warning,info,light,dark" | split: "," %}
         {% if alerts contains site.dhilan.handles.alert %}
