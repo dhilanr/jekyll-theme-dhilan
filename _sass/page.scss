@@ -196,8 +196,19 @@ main a[data-id][id] {
         padding: 2rem 2rem;
     }
 
+}
+
+// Smaller screens h1 size down a bit.
+@media (max-width: 992px) {
     h1 * {
-        font-size: 2rem;
+        font-size: 2.35rem;
+    }
+}
+
+// Tiny screens?  Wrap even h1
+@media (max-width: 260px) {
+    h1 * {
+        word-break: break-word;
     }
 }
 
