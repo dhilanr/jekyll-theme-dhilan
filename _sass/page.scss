@@ -166,6 +166,11 @@ main a[data-id][id] {
     visibility: hidden;
 }
 
+// LINK COLOR
+main a {
+    color:rgb(26, 26, 26)
+}
+
 // Don't number search results
 #search ol {
     list-style-type: none;
