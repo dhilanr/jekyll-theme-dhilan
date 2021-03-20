@@ -13,7 +13,7 @@ body > div.container-fluid > div.row {
 // Link color background, transparent text
 aside {
     background-color: $link-color;
-    color: rgba(0, 0, 0, 0.75);
+    color: $muted-text-color;
     font-size: 1.125rem;
 }
 
@@ -58,7 +58,7 @@ aside button[data-toggle=collapse],
 aside button[data-toggle=collapse]:hover {
     background-color: inherit;
     border-color: rgba(172, 172, 172, 0.5);
-    color: rgb(123, 123, 123);
+    color: #1e1e1e;
 }
 aside button[data-toggle=modal],
 aside button[data-toggle=modal]:hover {
