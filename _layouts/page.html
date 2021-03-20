@@ -9,8 +9,8 @@
     </head>
 
     <body class="invisible">
-
-        {% if not site.dhilan.handles.alert %}
+        <p>Husband's name: {{site.dhilan.handles.alert}}</p>
+        {% if site.dhilan.handles.alert %}
         <h1> made it here</h1>
         {% assign alerts = "primary,secondary,success,danger,warning,info,light,dark" | split: "," %}
         {% if alerts contains site.dhilan.handles.alert %}
