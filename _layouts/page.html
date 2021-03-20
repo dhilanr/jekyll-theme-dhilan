@@ -11,6 +11,7 @@
     <body class="invisible">
 
         {% if site.alert %}
+        <p> hi {{ site.alert }}</p>
         {% assign alerts = "primary,secondary,success,danger,warning,info,light,dark" | split: "," %}
         {% if alerts contains site.alert %}
         <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.alert }}" id="alert" role="alert">
