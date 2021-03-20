@@ -35,19 +35,16 @@ aside {
 aside.col-md {
     padding-right: 2.5rem !important;
     text-align: right;
-    width: 41.6666666667%;
-    // padding: 2rem 2rem;
 }
 
 // Fixed width, scroll on larger devices
 @include media-breakpoint-up(md) {
     @media screen {
         aside.col-md {
-            flex: 0 1 20rem;
+            flex: 0 1 auto;
             overflow-y: auto;
             position: sticky;
             z-index: $zindex-sticky - 1;	
-            width: 41.6666666667%;
         }
     }
 }
@@ -151,7 +148,7 @@ footer:empty {
 
 // Override column's padding, width
 main.col-md {
-    max-width: 500rem;
+    max-width: 200rem;
     overflow: auto; // https://stackoverflow.com/a/26523355
     padding: 4rem 2rem;
 }
@@ -182,6 +179,7 @@ main a[data-id][id] {
     // Less padding
     main.col-md {
         padding: 2rem 2rem;
+        text-align: right;
     }
 }
 
