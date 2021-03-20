@@ -22,6 +22,13 @@ $headings-font-weight: bold;
 // https://github.com/PhilipTrauner/pygments-github-css/blob/master/github.css
 @import "rouge";
 
+// Increase button size
+$btn-padding-y-sm: 0.2rem
+$btn-padding-x-sm: 0.2rem
+$btn-font-size-sm: 0.5rem
+// $btn-line-height-sm: 
+// $btn-border-radius-sm:
+
 // Align badges
 .badge {
     vertical-align: middle;
