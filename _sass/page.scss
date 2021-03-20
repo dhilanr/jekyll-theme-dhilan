@@ -69,6 +69,10 @@ aside button[data-toggle=modal]:hover {
     color: rgb(171, 171, 171);
 }
 
+aside a {
+    color: #aedcb9;
+}
+
 // Opaque border
 aside button[data-toggle=collapse]:hover {
     border-color: rgb(133, 133, 133);
@@ -168,10 +172,12 @@ main a[data-id][id] {
 
 // LINK COLOR
 main a {
-    color:rgb(26, 26, 26)
+    color:rgb(26, 26, 26);
+    font-family: "Roboto italic";
+    font-weight: 300;
 }
 main a:hover {
-    color:rgb(75, 130, 110)
+    color:#aedcb9;
 }
 
 // Don't number search results
