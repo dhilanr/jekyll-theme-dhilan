@@ -11,4 +11,8 @@ sass:
     - _sass/node_modules
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-gist
+  - jekyll-paginate
