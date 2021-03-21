@@ -200,6 +200,10 @@ main a:hover {
   height: auto;
 }
 
+.ratio-16x9 {
+  --aspect-ratio: calc(9 / 16 * 100%);
+}
+
 // Messages
 //
 // Show alert messages to users. You may add it to single elements like a `<p>`,
