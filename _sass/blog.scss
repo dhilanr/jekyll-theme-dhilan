@@ -1,0 +1,203 @@
+/*
+  Pagination
+
+  Super lightweight (HTML-wise) blog pagination. Should only be visible
+  when there is navigation available -- single buttons at top or bottom
+  of each page.
+*/
+
+.pagination {
+    color: $gray-3;
+    margin-bottom: $section-spacing;
+    text-align: center;
+  
+    > a {
+      background: $body-bg;
+      border: solid $border-color;
+      border-radius: $border-radius;
+      border-width: 1px;
+      box-shadow: $default-box-shadow;
+      display: inline-block;
+      max-width: $sidebar-width;
+      padding: $padding-v $padding-h;
+      width: 60%;
+    }
+  
+    > a:hover {
+      background-color: $border-color;
+    }
+  }
+  
+  // Bottom -> margin-top;
+  * + .pagination {
+    margin-top: $section-spacing;
+  }
+  
+  // Push above header if newer on mobile
+  .content .pagination:first-child {
+    margin-top: -$section-spacing * 2;
+  }
+  
+  // Make room for larger header by extending margin below title
+  .index #sidebar {
+    padding-bottom: calc(#{$section-spacing} + #{$padding-v});
+  }
+  
+  // But not on page1
+  .home.index #sidebar {
+    padding-bottom: $section-spacing;
+  }
+  
+  // Undo for larger screens
+  @media (min-width: $large-breakpoint) {
+    .pagination > a {
+      box-shadow: none;
+  
+      &:hover { box-shadow: $default-box-shadow; }
+    }
+  
+    .content .pagination:first-child {
+      margin-top: 0;
+  
+      + * {
+        border-top: 1px solid $border-color;
+        margin-top: $section-spacing;
+        padding-top: $section-spacing;
+      }
+    }
+  
+    .index #sidebar {
+      padding-bottom: $section-spacing;
+    }
+  }
+
+  .tags-list a {
+    margin-right: 0.5em;
+    opacity: 0.75;
+    white-space: nowrap;
+  }
+  
+  .tags-list a .tag-count {
+    background: $link-color;
+    border-radius: 1000px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.75em;
+    margin-left: 0.25em;
+    padding-left: 0.6em;
+    padding-right: 0.6em;
+  }
+  
+  .tags-list a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+  
+  @keyframes posts-for-tag-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  // Display only if targeted
+  .posts-for-tag {
+    display: none;
+  
+    &:target {
+      animation: posts-for-tag-fade-in 0.6s ease-in-out;
+      display: block;
+    }
+  }
+
+
+  // Posts and pages
+//
+// Each post is wrapped in `.post` and is used on default and post layouts. Each
+// page is wrapped in `.page` and is only used on the page layout.
+
+.posts-by-tag h2 {
+    text-transform: capitalize;
+  }
+  
+  // Blog post or page title
+  .page-title,
+  .post-title {
+    margin-top: 0;
+  }
+  
+  .page-title,
+  .post-title,
+  .post-title a {
+    color: $heading-color;
+  }
+  
+  h2.post-title,
+  h2.page-title {
+    font-size: 2rem;
+  }
+  
+  .post-tags a {
+    font-size: 0.8em;
+    margin-right: 0.5rem;
+    opacity: 0.75;
+    white-space: nowrap;
+  
+    .tag-name { text-transform: capitalize; }
+  
+    &:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+  
+  .posts-list {
+    list-style: none;
+    padding-left: 0;
+  
+    h3 {
+      margin-top: 0;
+    }
+  
+    li small {
+      color: #999;
+      font-size: 75%;
+      white-space: nowrap;
+    }
+  
+    li a:hover {
+      color: $link-color;
+      text-decoration: none;
+    }
+  
+    li a:hover small {
+      color: inherit;
+    }
+  }
+  
+  article + *,
+  .post-body ~ section {
+    border-top: 1px solid $border-color;
+    margin-top: $section-spacing;
+    padding-top: $section-spacing;
+  
+    > h2:first-child,
+    > h3:first-child {
+      margin-top: 0;
+    }
+  }
+  
+  // Meta data line below post title
+  .post-meta {
+    color: $body-muted;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+  }
+  
+  .post,
+  .page {
+    .content li + li {
+      margin-top: 0.25rem;
+    }
+  }
+  
+  button.disqus-load {
+    margin-top: 1em;
+  }
