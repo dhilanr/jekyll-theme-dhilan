@@ -167,14 +167,19 @@ main a[data-id][id] {
 }
 
 // LINK COLOR
-main a {
+main message a {
     color:rgb(26, 26, 26);
     font-family: "Roboto";
     font-weight: 300;
 }
 
+main message a {
+    color:rgb(75, 130, 110);
+    font-family: "Roboto";
+}
+
 main a:hover {
-    color:rgb(75, 130, 110)
+    color:rgb(18, 18, 18);
 }
 
 // Don't number search results
