@@ -170,12 +170,16 @@ main a[data-id][id] {
 main a {
     color:rgb(26, 26, 26);
     font-family: "Roboto";
+}
+
+a.message {
+    color:rgb(26, 26, 26);
+    font-family: "Roboto";
     font-weight: 300;
 }
 
-main message a {
+a.message:hover {
     color:rgb(75, 130, 110);
-    font-family: "Roboto";
 }
 
 main a:hover {
