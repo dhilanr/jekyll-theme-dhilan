@@ -168,7 +168,7 @@ main a[data-id][id] {
 
 // LINK COLOR
 main a {
-    color:rgb(26, 26, 26);
+    color:#268bd2;
     font-family: "Roboto";
 }
 
@@ -176,13 +176,13 @@ main a:hover {
     color:rgb(18, 18, 18);
 }
 
-.message a {
-    font-weight: 300;
-}
+// .message a {
+//     font-weight: 300;
+// }
 
-blockquote a {
-    font-weight: 300;
-}
+// blockquote a {
+//     font-weight: 300;
+// }
 
 // Don't number search results
 #search ol {
