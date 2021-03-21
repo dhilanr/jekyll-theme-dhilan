@@ -172,18 +172,12 @@ main a {
     font-family: "Roboto";
 }
 
-a.message {
-    color:rgb(26, 26, 26);
-    font-family: "Roboto";
-    font-weight: 300;
-}
-
-a.message:hover {
-    color:rgb(75, 130, 110);
-}
-
 main a:hover {
     color:rgb(18, 18, 18);
+}
+
+message a {
+    font-weight: 300;
 }
 
 // Don't number search results
