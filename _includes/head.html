@@ -63,7 +63,8 @@
 <script src="/assets/instantsearch.production.min.js?{{ time }}"></script>
 {%- endif %}
 
-<link href="{{ '/assets/' | append: page.layout | append: '.css' }}?{{ time }}" rel="stylesheet">
+<link href="{{ '/assets/' | append: 'default' | append: '.css' }}?{{ time }}" rel="stylesheet">
+<!-- <link href="{{ '/assets/' | append: page.layout | append: '.css' }}?{{ time }}" rel="stylesheet"> -->
 <script src="/assets/jekyll-theme-dhilan.js?{{ time }}"></script>
 
 <script>
