@@ -200,6 +200,11 @@ main a:hover {
   height: auto;
 }
 
+.ratio {
+  position: relative;
+  width: 100%;
+}
+
 .ratio-16x9 {
   --aspect-ratio: calc(9 / 16 * 100%);
 }
