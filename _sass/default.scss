@@ -283,8 +283,15 @@ main a:hover {
 
 .fa-ul {
   list-style-type: none;
+  list-style-position: ;
   margin-left: 2.5em;
   padding-left: 0;
+  font-size: 0.9rem;
+}
+
+li span {
+  position: relative;
+  left: -10px;
 }
 
 /*
