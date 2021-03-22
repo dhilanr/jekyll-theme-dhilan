@@ -3,8 +3,8 @@
 source "https://rubygems.org"
 gemspec
 
-# SEO
-gem 'jekyll-seo-tag'
+source "https://rubygems.org"
+gem "github-pages", group: :jekyll_plugins
 
-# PDF
-gem 'jekyll-pdf-embed'
+# SEO
+gem 'jekyll-seo-tag', group: :jekyll_plugins
