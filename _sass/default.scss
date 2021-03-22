@@ -206,7 +206,7 @@ main a:hover {
 }
 
 .ratio-16x9 {
-  --aspect-ratio: calc(9 / 16 * 100%);
+  height: calc(9 / 16 * 100%);
 }
 
 // Messages
