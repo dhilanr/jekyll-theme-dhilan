@@ -5,3 +5,6 @@ gemspec
 
 # SEO
 gem 'jekyll-seo-tag'
+
+# PDF
+gem 'jekyll-pdf-embed'
