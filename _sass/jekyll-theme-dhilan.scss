@@ -201,6 +201,10 @@ iframe {
     width: 1px;
 }
 
+iframe .vid {
+    aspect-ratio: 16/9;
+}
+
 // Confine images to parent
 img {
     max-width: 100%;
