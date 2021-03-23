@@ -10,6 +10,19 @@
 
     </head>
 
+
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY0L5Q1HKQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+
     <body class="invisible">
 
         <!-- alerts added to _config.yml: primary,secondary,success,danger,warning,info,light,dark -->
