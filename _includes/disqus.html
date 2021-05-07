@@ -17,17 +17,14 @@
     this.page.identifier = "{{ page.guid or page.id }}" ||
                            "{{ page.url | absolute_url }}";
   }
-  function loadDisqusComments() { // DON'T EDIT BELOW THIS LINE
+  (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
     s.src = '//{{ site.disqus.shortname }}.disqus.com/embed.js';
     s.setAttribute('data-timestamp', +new Date());
     (d.head || d.body).appendChild(s);
-  }
-  </script>
-  <noscript>
-    Please enable JavaScript to view the
-    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus</a>.
-  </noscript>
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
 {% elsif jekyll.environment != "production" %}
   <p>
