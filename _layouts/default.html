@@ -17,6 +17,10 @@
         </script>
         {% endif %}
 
+        {% if page.norobot %}
+        <meta name="robots" content="noindex">
+        {% endif %}
+
     </head>
 
     <body class="invisible">
